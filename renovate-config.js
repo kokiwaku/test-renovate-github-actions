@@ -12,8 +12,6 @@ module.exports = {
     onboarding: false,
     // 使用するプラットフォームを指定
     platform: 'github',
-    // dry-runのレベルを指定
-    dryRun: 'full',
     // パッケージ毎の更新ルールを指定
     packageRules: [
         {
