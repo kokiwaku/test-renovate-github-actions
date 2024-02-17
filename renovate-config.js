@@ -14,6 +14,6 @@ module.exports = {
     platform: 'github',
     // 対象リポジトリを設定
     repositories: [
-        'kokiwaku/test-renovate'
+        'kokiwaku/test-renovate-github-actions'
     ]
 };
