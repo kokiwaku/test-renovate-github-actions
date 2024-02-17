@@ -12,6 +12,10 @@ module.exports = {
     onboarding: false,
     // 使用するプラットフォームを指定
     platform: 'github',
+    // 対象リポジトリを設定
+    repositories: [
+        'kokiwaku/test-renovate'
+    ],
     // パッケージ毎の更新ルールを指定
     packageRules: [
         {
