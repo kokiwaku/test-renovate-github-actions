@@ -5,29 +5,29 @@
     "branchPrefix": "test-renovate/",
     "username": "renovate-release",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+    "timezone": "Asia/Tokyo",
     "onboarding": false,
     "platform": "github",
     "repositories": [
         "kokiwaku/test-renovate-github-actions"
     ],
+    "prHourlyLimit": 0,
     "packageRules": [
-        {
-            "description": "Dockerfile",
-            "matchFileNames": [
-                "docker /**/Dockerfile"
-            ]
-        },
         {
             "description": "composer.json",
             "matchFileNames": [
                 "src/composer.json"
-            ]
+            ],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "composer.json (non-major)"
         },
         {
             "description": "package.json",
             "matchFileNames": [
                 "src/package.json"
-            ]
+            ],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "package.json (non-major)"
         }
     ]
 }
