@@ -11,6 +11,7 @@
     "repositories": [
         "kokiwaku/test-renovate-github-actions"
     ],
+    "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
     "prHourlyLimit": 0,
     "packageRules": [
         {
