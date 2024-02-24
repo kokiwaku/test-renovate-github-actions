@@ -1,35 +1,26 @@
 {
-    "extends": [
-        "config:recommended"
-    ],
-    "labels": [
-        "renovate"
-    ],
-    "branchPrefix": "test-renovate/",
-    "username": "renovate-release",
-    "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
-    "timezone": "Asia/Tokyo",
-    "onboarding": false,
-    "platform": "github",
-    "repositories": [
-        "kokiwaku/test-renovate-github-actions"
-    ],
-    "schedule": [
-        "after 10pm and before 5am every weekday",
-        "every weekend"
-    ],
-    "prHourlyLimit": 0,
-    "packageRules": [
-        {
-            "groupName": "all non-major dependencies",
-            "groupSlug": "all-minor-patch",
-            "matchPackagePatterns": [
-                "*"
-            ],
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ]
-        }
-    ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:recommended"],
+     "labels": ["renovate"],
+     "branchPrefix": "test-renovate/",
+     "username": "renovate-release",
+     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+     "timezone": "Asia/Tokyo",
+     "onboarding": false,
+     "platform": "github",
+     "repositories": ["kokiwaku/test-renovate-github-actions"],
+     "schedule": [
+       "after 10pm every weekday",
+       "every weekend",
+       "before 5am every weekday"
+     ],
+     "prHourlyLimit": 0,
+     "packageRules": [
+       {
+         "groupName": "all non-major dependencies",
+         "groupSlug": "all-minor-patch",
+         "matchPackagePatterns": ["*"],
+         "matchUpdateTypes": ["minor", "patch"]
+       }
+     ]
 }
