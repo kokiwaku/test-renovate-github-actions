@@ -12,8 +12,9 @@
         "every weekend"
     ],
     "repositories": [
-        "test-renovate-github-actions"
+        "kokiwaku/test-renovate-github-actions"
     ],
+    "username": "renovatebot",
     "platform": "github",
     "packageRules": [
         {
