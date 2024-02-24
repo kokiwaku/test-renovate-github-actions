@@ -11,11 +11,6 @@
         "after 10pm and before 5am every weekday",
         "every weekend"
     ],
-    "repositories": [
-        "kokiwaku/test-renovate-github-actions"
-    ],
-    "username": "renovatebot",
-    "platform": "github",
     "packageRules": [
         {
             "groupName": "all non-major dependencies",
