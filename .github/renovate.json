@@ -1,29 +1,29 @@
 {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "config:recommended"
+        "config:base"
+    ],
+    "labels": [
+        "renovate"
     ],
     "branchPrefix": "test-renovate/",
     "username": "renovate-release",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
     "onboarding": false,
     "platform": "github",
+    "positories": [
+        "kokiwaku/test-renovate-github-actions"
+    ],
     "packageRules": [
         {
-            "description": "Dockerfile",
-            "matchFileNames": [
-                "docker /**/Dockerfile"
-            ]
-        },
-        {
-            "description": "composer.json",
-            "matchFileNames": [
-                "src/composer.json"
-            ]
-        },
-        {
-            "description": "package.json",
-            "matchFileNames": [
-                "src/package.json"
+            "groupName": "all non-major dependencies",
+            "groupSlug": "all-minor-patch",
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
             ]
         }
     ]
