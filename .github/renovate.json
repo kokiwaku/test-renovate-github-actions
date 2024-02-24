@@ -1,26 +1,33 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
-    "labels": ["renovate"],
+    "extends": [
+        "config:recommended"
+    ],
     "branchPrefix": "test-renovate/",
     "username": "renovate-release",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
     "timezone": "Asia/Tokyo",
     "onboarding": false,
     "platform": "github",
-    "repositories": ["kokiwaku/test-renovate-github-actions"],
-    "schedule": [
-      "after 10pm every weekday",
-      "every weekend",
-      "before 5am every weekday"
+    "repositories": [
+        "kokiwaku/test-renovate-github-actions"
     ],
     "prHourlyLimit": 0,
     "packageRules": [
-      {
-        "groupName": "all non-major dependencies",
-        "groupSlug": "all-minor-patch",
-        "matchPackagePatterns": ["*"],
-        "matchUpdateTypes": ["minor", "patch"]
-      }
+        {
+            "description": "composer.json",
+            "matchFileNames": [
+                "src/composer.json"
+            ],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "composer.json (non-major)"
+        },
+        {
+            "description": "package.json",
+            "matchFileNames": [
+                "src/package.json"
+            ],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "package.json (non-major)"
+        }
     ]
 }
