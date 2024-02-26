@@ -3,8 +3,7 @@
     "extends": [
         "config:base",
         ":prHourlyLimitNone",
-        ":timezone(Asia/Tokyo)",
-        
+        ":timezone(Asia/Tokyo)"  
     ],
     "branchPrefix": "test-renovate/",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
