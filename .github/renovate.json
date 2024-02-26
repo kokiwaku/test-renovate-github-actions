@@ -11,7 +11,7 @@
         "renovate"
     ],
     "schedule": [
-        "before 10am on Monday"
+        "before 11am on Monday"
     ],
     "packageRules": [
         {
